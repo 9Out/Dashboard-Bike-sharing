@@ -112,7 +112,7 @@ st.pyplot(fig)
 with st.expander("Lihat Penjelasan"):
     st.write(
         """Terlihat jelas bahwa puncak penyewaan terjadi pada pukul **17:00**, 
-        yang selaras dengan jam sibuk berangkat dan pulang kerja/sekolah. 
+        yang selaras dengan jam sibuk pulang kerja/sekolah. 
         Sebaliknya, penyewaan sangat sepi pada dini hari (pukul 04:00)."""
     )
 
@@ -203,4 +203,4 @@ with st.expander("Lihat Kesimpulan Segmentasi Pelanggan"):
         Hebatnya, baik pengguna *Registered* maupun *Casual* sama-sama mengalami pertumbuhan yang pesat dari tahun ke tahun."""
     )
 
-st.caption("Copyright © Nirot 2024 - Dicoding Data Analysis Project")
+st.caption("Copyright © Nirot 2026 - Dicoding Data Analysis Project")
