@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+import os
 
 # Mengatur tampilan halaman Streamlit
 st.set_page_config(page_title="Bike Sharing Dashboard", page_icon="🚲", layout="wide")
@@ -12,8 +13,16 @@ st.set_page_config(page_title="Bike Sharing Dashboard", page_icon="🚲", layout
 @st.cache_data
 def load_data():
     # Load dataset
-    day_df = pd.read_csv("day_clean.csv")
-    hour_df = pd.read_csv("hour_clean.csv")
+    # day_df = pd.read_csv("Dashboard/day_clean.csv")
+    # hour_df = pd.read_csv("Dashboard/hour_clean.csv")
+
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    DAY_PATH = os.path.join(BASE_DIR, "..", "Dashboard", "day_clean.csv")
+    HOUR_DATA_PATH = os.path.join(BASE_DIR, "..", "Dashboard", "hour_clean.csv")
+
+    day_df = pd.read_csv(DAY_PATH)
+    hour_df = pd.read_csv(HOUR_DATA_PATH)
+    
     
     # Ubah tipe data dteday menjadi datetime
     day_df['dteday'] = pd.to_datetime(day_df['dteday'])
