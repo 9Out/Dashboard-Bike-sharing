@@ -148,7 +148,7 @@ with col2:
         st.write("Berdasarkan pengelompokan waktu, sore hari (evening) mendominasi jumlah penyewaan terbanyak dibandingkan waktu lainnya.")
 
 # --- VISUALISASI 3: PERFORMA KUARTAL ---
-st.subheader("4. Tren Total Penyewaan per Kuartal")
+st.subheader("4. Tren Total Penyewaan per Kuartal (Periode 2011 - 2012)")
 fig4, ax4 = plt.subplots(figsize=(14, 5))
 quarterly_counts = main_day_df.set_index('dteday').resample('Qs')['cnt'].sum()
 ax4.plot(quarterly_counts.index, quarterly_counts.values, marker='o', linewidth=2, color="#72BCD4")
